@@ -16,7 +16,7 @@ Computer brauchen aber andere Informationen, um miteinander zu kommunizieren.
 die eine Verbindung zu diesem anderen Computer aufbaut
 und die Daten abruft, die die Website beschreiben.
 * Diese Daten reicht sie wiederum weiter an eine andere Software,
-die daraus die graphische Aufbereitung ableitet, die euch angezeigt wird –
+die daraus die grafische Aufbereitung ableitet, die euch angezeigt wird –
 bestehend aus Texten, Buttons, Bildern,
 in einer bestimmten Anordnung, in einer bestimmten Größe und Farbe, und so weiter.
 * Auf der Website befinden sich in vielen Fällen Werbeanzeigen –
@@ -46,7 +46,7 @@ die meisten sind auf eine bestimmte Art von Software-Programmen spezialisiert.
 Manche unterscheiden sich nur in Details voneinander,
 manche verfolgen komplett andere Ansätze als andere.
 
-In dieser AG wollen wir die Programmiersprache **Kotlin** kennen lernen.
+In dieser AG wollen wir die Programmiersprache **Kotlin** kennenlernen.
 Kotlin ist eine vielseitig einsetzbare Sprache,
 die sich innerhalb weniger Jahre zu einer der beliebtesten Programmiersprachen entwickelt hat.
 Beispielsweise wurden große Teile des Android-Betriebssystems
@@ -62,7 +62,7 @@ IntelliJ IDEA, ist kostenlos verfügbar (in der "Community Edition").
 
 Kotlin-Programme sind im Prinzip einfache Text-Dateien.
 Damit sie von Kotlin verstanden werden, muss der Inhalt bestimmten Regeln folgen.
-Diese wollen wir in den nächsten Wochen Schritt für Schritt kennen lernen.
+Diese wollen wir in den nächsten Wochen Schritt für Schritt kennenlernen.
 
 Das kleinstmögliche Kotlin-Programm besteht aus drei Zeilen und sieht wie folgt aus: 
 
@@ -100,12 +100,98 @@ fun main() {
 Durch einen erneuten Aufruf der vordefinierten Funktion `println`
 wird bei der Ausführung des Programms ein weiterer Satz auf dem Bildschirm ausgegeben.
 
-## Eigene Funktionen definieren
+## Funktionen
 
 Kotlin bietet viele vordefinierte Funktionen wie `println`,
 die für verschiedenste Aufgaben in einem Programm genutzt werden.
-Einige davon werden wir nach und nach kennen lernen.
+Einige davon werden wir nach und nach kennenlernen.
 Zunächst wollen wir uns aber ansehen, wie wir selbst eigene Funktionen definieren können,
 und wie wir diese anschließend benutzen können.
 
-_... Fortsetzung folgt!_ 
+Funktionen strukturieren eure Software.
+Sie können quasi beliebig tief verschachtelt sein.
+Eine Aufgabe eurer Software, die durch eine Funktion repräsentiert wird,
+besteht in der Regel aus mehreren Teilaufgaben,
+welche dann wiederum durch verschiedene Funktionen definiert werden.
+Für jede dieser Funktionen,
+egal ob sie auf oberster Ebene euer gesamtes Programm zusammenfasst
+oder eine winzige Teilaufgabe definiert,
+gilt die obige Definition:
+Sie haben Eingabedaten, Ausgabedaten und eine Abfolge von Anweisungen.
+
+## Daten
+
+Was genau sind denn nun diese "Daten", von denen ich hier spreche?
+Daten können so ziemlich jede Art von Information sein.
+Beispiele für häufig auftauchende Daten in Software sind Zahlen, Namen, Texte und Zeitangaben.
+Eine wichtige Unterscheidung:
+In manchen Zusammenhängen werden wir in Zukunft von **Werten** reden,
+in manchen von **Datentypen**.
+Als Datentyp bezeichnen wir eine Gruppe gleichartiger Daten, zum Beispiel: Zahlen.
+Ein Wert hingegen ist ein konkretes Element, zum Beispiel: die Zahl 7.
+Wir sagen also: Der _Wert_ 7 ist vom _Typ_ "Zahl".
+
+Wenn wir unsere Software später ausführen,
+werden wir ihr _konkrete_ Daten als Eingabe geben, also _Werte_.
+Da wir unsere Software aber so bauen möchten,
+dass sie für alle konkreten Werte funktioniert,
+definieren wir unsere Funktionen abstrakt für bestimmte _Typen_ von Daten.
+Dies wird vielleicht etwas besser verständlich,
+wenn wir uns das folgende Beispiel angucken.
+
+## Eigene Funktionen definieren
+
+Als erstes Beispiel wollen wir eine Funktion definieren,
+die eine simple Berechnung durchführt, nämlich:
+eine Zahl zu verdoppeln.
+Die Funktion hat also als _Eingabe_ eine Zahl,
+und auch ihre _Ausgabe_ ist eine Zahl.
+Diese Definition von Eingabe- und Ausgabetypen
+bezeichnet man in der Programmierung als die **Signatur** einer Funktion.
+Mit einer solchen Signatur beginnen wir die Definition einer eigenen Funktion.
+Für unsere Verdoppler-Funktion sieht sie wie folgt aus:
+
+```
+fun verdopple(eingabe: Int): Int {
+```
+
+Das Stichwort `fun` steht hier nicht für Spaß,
+sondern als Abkürzung für Funktion.
+Wenn der Computer dieses Stichwort "sieht", weiß er Bescheid,
+dass nun die Definition einer neuen Funktion folgt.
+Als nächstes Wort folgt der Name unserer Funktion.
+Diesen können wir völlig frei wählen.
+Der Computer versteht in diesem Sinne keine "Menschensprache",
+aus seiner Sicht ist es egal,
+ob wir unsere Funktion "verdopple", "blabla" oder auch "zypqpufaljf" nennen.
+Aber da wir und andere Menschen den Überblick behalten wollen,
+tun wir uns selbst einen Gefallen,
+wenn wir einen (für Menschen) klar verständlichen Namen wählen.
+
+Die nun folgenden runden Klammern markieren die Definition
+der Eingabe- und Ausgabedaten.
+Hier könnt ihr euch merken:
+_In_ den Klammern stehen die _Eingabedaten_,
+_außerhalb_ der Klammern die _Ausgabedaten_.
+Für Kotlin interessant ist hier jeweils das Stichwort `Int` –
+dieses bezeichnet den Datentyp der ganzen Zahlen (englisch _"integer"_: "ganze Zahl").
+Das Wort "eingabe" hingegen ist wiederum ein Name,
+den wir frei wählen können.
+Wofür wir diesen brauchen, sehen wir gleich.
+
+Am Ende der Zeile steht eine öffnende geschweifte Klammer –
+diese zeigt an, dass die Signatur der Funktion abgeschlossen ist,
+und in den folgenden Zeilen nun der sogenannte **Rumpf** der Funktion folgt.
+Das ist der Fachbegriff für die Abfolge von Anweisungen,
+die der Computer benötigt, um aus den Eingabedaten die Ausgabedaten zu berechnen.
+
+Ergänzen wir diesen Rumpf in unserem Beispiel,
+dann sieht die vollständige Definition unserer Funktion so aus:
+
+```
+fun verdopple(eingabe: Int): Int {
+    return eingabe * 2
+}
+```
+
+_... Fortsetzung folgt!_
