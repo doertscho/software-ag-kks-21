@@ -58,6 +58,26 @@ Das meistgenutzte Werkzeug für die Entwicklung von Kotlin-Programmen,
 IntelliJ IDEA, ist kostenlos verfügbar (in der "Community Edition").
 [Ihr könnt es hier herunterladen.](https://www.jetbrains.com/de-de/idea/download/)
 
+## Ein paar Anmerkungen zum Programmieren lernen
+
+Viele der folgenden Informationen können auf den ersten Blick unklar oder kompliziert wirken.
+Am besten lässt sich all dies nach und nach verstehen,
+indem ihr alles selbst ausprobiert
+und wiederholt kleine Programme schreibt.
+Wenn ein Satz im folgenden Text sich euch nicht sofort erschließt,
+lasst euch davon bitte nicht abbringen,
+mit der praktischen Erfahrung wird sich vieles im Laufe der Zeit ergeben.
+
+Und: Programmieren lernen funktioniert nicht über Auswendiglernen.
+Auch professionelle Software-Entwickler*innen nutzen jeden Tag Google
+oder andere Suchmaschinen,
+und kennen nicht sämtliche Funktionen auswendig,
+die eine Programmiersprache wie Kotlin bereitstellt.
+Außerdem ist ein Programm wie IntelliJ IDEA hierbei eine große Hilfe.
+Es zeigt euch beispielsweise unmittelbar an,
+wenn euer Programm Tippfehler enthält,
+macht euch Vorschläge und bietet viele zusätzliche Informationen.
+
 ## Das einfachste Kotlin-Programm
 
 Kotlin-Programme sind im Prinzip einfache Text-Dateien.
@@ -193,5 +213,23 @@ fun verdopple(eingabe: Int): Int {
     return eingabe * 2
 }
 ```
+
+Da in diesem Fall nur eine simple Rechenoperation durchgeführt werden muss,
+besteht unser Programm-Code für diese Funktion nur aus einer Zeile.
+Das Schlüsselwort `return` zeigt an,
+dass in dieser Zeile der Ausgabewert (auch Rückgabewert genannt) der Funktion berechnet wird
+(englisch _"return"_: "Rückgabe").
+Simple mathematische Operationen können in Kotlin so aufgeschrieben werden,
+wie wir es auch aus dem Matheunterricht kennen.
+Die Verdopplung unserer Eingabezahl können wir also einfach als `eingabe * 2`.
+Das Wort `eingabe` ist hier der Name, das wir in der vorherigen Zeile,
+der Signatur der Funktion,
+für die Eingabezahl festgelegt haben.
+Auch hier handelt es sich wieder um eine Bezeichnung,
+die vor allem uns als Menschen hilft, unser Programm zu verstehen.
+Aus Sicht des Computers ist es auch hier egal,
+ob dieser Name "eingabe" oder "x" oder "zahl" oder auch "alkjdsflakdjsfl" heißt.
+
+## Aufrufen von Funktionen
 
 _... Fortsetzung folgt!_
