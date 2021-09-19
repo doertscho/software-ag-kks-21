@@ -232,4 +232,5 @@ ob dieser Name "eingabe" oder "x" oder "zahl" oder auch "alkjdsflakdjsfl" heißt
 
 ## Aufrufen von Funktionen
 
+
 _... Fortsetzung folgt!_
