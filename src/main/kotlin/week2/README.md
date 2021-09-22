@@ -89,7 +89,7 @@ Das geht auch, aber das werden wir später kennenlernen.
 ## Kommentare
 
 Um gute Software-Programme zu schreiben,
-müsst ihr nicht dafür sorgen, dass der Computer euch versteht,
+müsst ihr nicht nur dafür sorgen, dass der Computer euch versteht,
 es ist auch wichtig, dass andere Menschen euer Programm verstehen –
 oder ihr selbst, wenn ihr zu einem späteren Zeitpunkt auf euren Code schaut.
 Ein Mittel dafür sind klar verständliche Namen für Funktionen und Werte,
