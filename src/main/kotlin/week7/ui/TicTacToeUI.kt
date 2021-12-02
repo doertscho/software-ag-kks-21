@@ -9,6 +9,7 @@ import week7.Symbol
 import week7.ai.SimpleAiPlayer
 import week7.ai.WinningMoveAiPlayer
 import week7.runGame
+import week8.LookAheadAiPlayer
 
 class TicTacToeUI : App(MainView::class) {
 
@@ -20,7 +21,7 @@ class TicTacToeUI : App(MainView::class) {
 
         val players: Map<Symbol, Player> = mapOf(
             Symbol.O to uiPlayer,
-            Symbol.X to WinningMoveAiPlayer(),
+            Symbol.X to LookAheadAiPlayer(),
         )
 
         Platform.runLater {
