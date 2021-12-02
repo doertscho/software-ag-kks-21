@@ -2,6 +2,8 @@ package week7.ai
 
 import week7.*
 
+// Diese KI ist etwas schlauer als der SimpleAiPlayer. Wenn es die Möglichkeit gibt, das Spiel im aktuellen Zug zu
+// gewinnen, wird diese KI den entsprechenden Zug ausführen.
 class WinningMoveAiPlayer : Player {
 
     override fun nextMove(state: State): Move {
